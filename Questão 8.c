@@ -1,3 +1,16 @@
+//8. 	Faça um programa para controlar o estoque de mercadorias de uma empresa. Inicialmente o programa deverá ler dois
+//	vetores com dez posições cada, onde o primeiro corresponde ao código do produto e o segundo corresponde ao total
+//	desse produto em estoque. Logo após, o programa deverá ler um conjunto indeterminado de dados contendo o código
+//	de um cliente, o código do produto que este deseja comprar juntamente com a quantidade. Código do cliente igual à
+//	zero indica fim do programa. O programa deverá verificar:
+//	• Se o código do produto solicitado existe. Se existir, tentar atender ao pedido; caso contrário, exibir mensagem
+//	“Código Inexistente”.
+//	• Cada pedido feito por um cliente só pode ser atendido integralmente. Caso isso não seja possível, escrever a
+//	mensagem “Não tem estoque suficiente dessa mercadoria”. Se puder atendê-lo, escrever a mensagem “Pedido
+//	atendido. Obrigado e volte sempre”.
+//	• Efetuar a atualização do estoque somente se o pedido for atendido integralmente;
+//	• No final do programa, escrever os códigos dos produtos com seus respectivos estoques já atualizados.
+
 #include <stdio.h>
 #include <locale.h>
 #define tam 10
@@ -7,7 +20,7 @@ void Preencher(int vet1[], int vet2[])
 	int i;
 	for (i = 0; i<tam; i++)
 	{
-		printf("Informe o c�digo do produto: ");
+		printf("Informe o código do produto: ");
 		scanf("%d", &vet1[i]);
 		fflush(stdin);
 		printf("Informe a quantidade do produto em estoque: ");
@@ -15,7 +28,7 @@ void Preencher(int vet1[], int vet2[])
 		fflush(stdin);
 		while(vet2[i] < 0)
 		{
-			printf("Quantidade inv�lida, digite novamente: ");
+			printf("Quantidade inválida, digite novamente: ");
 			scanf("%d", &vet2[i]);
 			fflush(stdin);
 		}
@@ -37,7 +50,7 @@ int Verificar(int vet1[], int prod)
 void Pedido(int vet1[], int vet2[])
 {
 	int prod, verif, qt;
-	printf("Informe o c�digo do produto: ");
+	printf("Informe o código do produto: ");
 	scanf("%d", &prod);
 	fflush(stdin);
 	verif = Verificar(vet1, prod);
@@ -52,12 +65,12 @@ void Pedido(int vet1[], int vet2[])
 	fflush(stdin);
 	while(qt < 0)
 	{
-		printf("Inv�lido, digite novamente: ");
+		printf("Inválido, digite novamente: ");
 		scanf("%d", &qt);
 		fflush(stdin);
 	}
 	if(vet2[verif] < qt)
-		printf("N�o tem estoque suficiente dessa mercadoria!\n"); 
+		printf("Não tem estoque suficiente dessa mercadoria!\n"); 
 	else
 	{
 		vet2[verif] = vet2[verif] - qt;
@@ -72,7 +85,7 @@ void Atendimento(int vet1[], int vet2[])
 	{
 		printf("1- Fazer pedido\n");
 		printf("0- Encerrar\n");
-		printf("C�digo do cliente: ");
+		printf("Código do cliente: ");
 		cod = getchar();
 		fflush(stdin);
 		switch(cod)
@@ -83,7 +96,7 @@ void Atendimento(int vet1[], int vet2[])
 		case '0':
 			break;
 		default:
-			printf("Inv�lido\n");
+			printf("Inválido\n");
 		}
 		printf("\n");
 	}while(cod != '0');
