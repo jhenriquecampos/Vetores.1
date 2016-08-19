@@ -1,3 +1,11 @@
+//7. 	Uma empresa possui √¥nibus com 48 lugares (24 janelas e 24 no corredor). Fa√ßa um programa que utilize dois vetores
+//	para controlar as poltronas ocupadas no corredor e na janela. Considere que zero (0) representa poltrona desocupada e
+//	um (1) representa poltrona ocupada. Esse programa deve controlar a venda de passagens da seguinte maneira:
+//	‚Ä¢ O cliente informa se deseja poltrona no corredor ou na janela e, depois, o programa deve informar quais poltronas
+//	est√£o dispon√≠veis para venda;
+//	‚Ä¢ Quando n√£o existirem poltronas livres no corredor, nas janelas ou, ainda, quando o √¥nibus estiver completamente
+//	cheio, deve ser mostrada uma mensagem de acordo com o caso.
+
 #include <stdio.h>
 #include <locale.h>
 #define tam 24
@@ -31,13 +39,13 @@ void Remover(int vet[], int lugar)
 	{
 		printf("Remover cliente?\n");
 		printf("1- Sim\n");
-		printf("2- N„o\n");
-		printf("OpÁ„o: ");
+		printf("2- N√£o\n");
+		printf("Op√ß√£o: ");
 		op = getchar();
 		fflush(stdin);
 		while(op < '1' || op > '2')
 		{
-			printf("Inv·lido, digite novamente: ");
+			printf("Inv√°lido, digite novamente: ");
 			op = getchar();
 			fflush(stdin);
 		}
@@ -52,7 +60,7 @@ void Remover(int vet[], int lugar)
 		}
 	}//Fim do if
 	else
-		printf("\nLugar j· vazio\n");
+		printf("\nLugar j√° vazio\n");
 }
 
 void Cadastrar(int vet[], int lugar)
@@ -63,7 +71,7 @@ void Cadastrar(int vet[], int lugar)
 		printf("\nCliente cadastrado com sucesso\n");
 	}
 	else
-		printf("\nLugar j· ocupado\n");
+		printf("\nLugar j√° ocupado\n");
 }
 
 
@@ -77,7 +85,7 @@ void menu(int vetc[], int vetj[])
 		printf("1- Cadastrar cliente\n");
 		printf("2- Remover cliente\n");
 		printf("0- Sair\n");
-		printf("Informe a opÁ„o: ");
+		printf("Informe a op√ß√£o: ");
 		op = getchar();
 		fflush(stdin);
 		printf("\n");
@@ -88,11 +96,11 @@ void menu(int vetc[], int vetj[])
 			dispJ = VerificarDisp(vetj);
 			if(dispC == 1 && dispJ == 1)
 			{
-				printf("‘nibus lotado\n");
+				printf("√înibus lotado\n");
 				break;
 			}
 			printf("1- Corredor\n2- Janela\n");
-			printf("Informe a preferÍncia: ");
+			printf("Informe a prefer√™ncia: ");
 			pref = getchar();
 			fflush(stdin);
 			switch(pref)
@@ -104,25 +112,25 @@ void menu(int vetc[], int vetj[])
 					printf("Corredor lotado\n");
 					break;
 				}
-				printf("Lugares disponÌveis no corredor:\n");
+				printf("Lugares dispon√≠veis no corredor:\n");
 				Disponiveis(vetc);
 				printf("Informe o lugar desejado: ");
 				scanf("%d", &lugar);
 				fflush(stdin);
 				printf("Deseja cadastrar o cliente no lugar %d corredor?\n", lugar);
-				printf("1- Sim\n2- N„o\nOpÁ„o: ");
+				printf("1- Sim\n2- N√£o\nOp√ß√£o: ");
 				sn = getchar();
 				fflush(stdin);
 				while(sn < '1' || sn > '2')
 				{
-					printf("Inv·lido, digite novamente: ");
+					printf("Inv√°lido, digite novamente: ");
 					sn = getchar();
 					fflush(stdin);
 				}
 				if(sn == '1')
 					Cadastrar(vetc, lugar);
 				else
-					printf("Cliente n„o cadastrado\n");
+					printf("Cliente n√£o cadastrado\n");
 				break;
 			case '2':
 				dispJ = VerificarDisp(vetj);
@@ -131,33 +139,33 @@ void menu(int vetc[], int vetj[])
 					printf("Janelas lotadas\n");
 					break;
 				}
-				printf("Lugares disponÌveis na janela:\n");
+				printf("Lugares dispon√≠veis na janela:\n");
 				Disponiveis(vetj);
 				printf("Informe o lugar desejado: ");
 				scanf("%d", &lugar);
 				fflush(stdin);
 				printf("Deseja cadastrar o cliente no lugar %d janela?\n", lugar);
-				printf("1- Sim\n2- N„o\nOpÁ„o: ");
+				printf("1- Sim\n2- N√£o\nOp√ß√£o: ");
 				sn = getchar();
 				fflush(stdin);
 				while(sn < '1' || sn > '2')
 				{
-					printf("Inv·lido, digite novamente: ");
+					printf("Inv√°lido, digite novamente: ");
 					sn = getchar();
 					fflush(stdin);
 				}
 				if(sn == '1')
 					Cadastrar(vetj, lugar);
 				else
-					printf("Cliente n„o cadastrado\n");
+					printf("Cliente n√£o cadastrado\n");
 				break;
 			default:
-				printf("Dado inv·lido\n");
+				printf("Dado inv√°lido\n");
 			}
 			break;
 		case '2':
 			printf("1- Corredor\n2- Janela\n");
-			printf("Informe a opÁ„o: ");
+			printf("Informe a op√ß√£o: ");
 			pref = getchar();
 			fflush(stdin);
 			switch(pref)
@@ -175,13 +183,13 @@ void menu(int vetc[], int vetj[])
 				Remover(vetj, lugar);
 				break;
 			default:
-				printf("Dado Inv·lido\n");
+				printf("Dado Inv√°lido\n");
 			}
 			break;
 		case '0':
 			break;
 		default:
-			printf("OpÁ„o Inv·lida\n");
+			printf("Op√ß√£o Inv√°lida\n");
 		}//Fim do switch
 		printf("\n");
 	}while(op != '0');
