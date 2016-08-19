@@ -1,3 +1,8 @@
+//1. 	Fa√ßa um programa que, dados dois vetores inteiros de 20 posi√ß√µes, efetue as respectivas opera√ß√µes indicadas por um
+//	outro vetor de 20 posi√ß√µes de caracteres tamb√©m fornecido pelo usu√°rio, contendo as quatro opera√ß√µes aritm√©ticas em
+//	qualquer combina√ß√£o, armazenando os resultados em um quarto vetor e apresentando na sa√≠da padr√£o quais as
+//	opera√ß√µes realizadas, os operandos envolvidos e os resultados.
+
 #include <stdio.h>
 #include <locale.h>
 #define tam 20
@@ -7,24 +12,24 @@ void preencherVINT(int vet[])//preenchimento dos vetores de inteiros
 	int i;
 	for (i = 0; i<tam; i++)
 	{
-		printf("N˙mero %d: ", i+1);
+		printf("N√∫mero %d: ", i+1);
 		scanf("%d", &vet[i]);
 		fflush(stdin);
 	}
 	printf("\n");
 }
 
-void preencherVOP(char vet[])//preenchimento do vetor de operaÁıes
+void preencherVOP(char vet[])//preenchimento do vetor de opera√ß√µes
 {
 	int i;
 	for (i = 0; i<tam; i++)
 	{
-		printf("Informe a operaÁ„o %d: ", i+1);
+		printf("Informe a opera√ß√£o %d: ", i+1);
 		vet[i] = getchar();
 		fflush(stdin);
 		while(vet[i] != '/' && vet[i] != '*' && vet[i] != '-' && vet[i] != '+')
 		{
-			printf("OperaÁ„o inv·lida, digite novamente: ");
+			printf("Opera√ß√£o inv√°lida, digite novamente: ");
 			vet[i] = getchar();
 			fflush(stdin);
 		}
@@ -55,26 +60,26 @@ void Vetor4(int vet1[], int vet2[], char vet3[], int vet4[])//preenchimento do v
 	}
 }
 
-void Exibir(int vet1[], int vet2[], char vet3[], int vet4[])//ExibiÁ„o das operaÁıes, operandos e resultados
+void Exibir(int vet1[], int vet2[], char vet3[], int vet4[])//Exibi√ß√£o das opera√ß√µes, operandos e resultados
 {
 	int i;
-	printf("Resultados das operaÁıes:\n");
+	printf("Resultados das opera√ß√µes:\n");
 	for(i = 0; i<tam; i++)
 	{
-		printf("\nOperaÁ„o realizada %d: ", i+1);
+		printf("\nOpera√ß√£o realizada %d: ", i+1);
 		switch(vet3[i])
 		{
 		case '+':
-			printf("AdiÁ„o\n");
+			printf("Adi√ß√£o\n");
 			break;
 		case '-':
-			printf("SubtraÁ„o\n");
+			printf("Subtra√ß√£o\n");
 			break;
 		case '*':
-			printf("MultiplicaÁ„o\n");
+			printf("Multiplica√ß√£o\n");
 			break;
 		case '/':
-			printf("Divis„o\n");
+			printf("Divis√£o\n");
 			break;
 		}
 		printf("\nOperandos envolvidos:\n");
