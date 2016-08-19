@@ -1,3 +1,7 @@
+//6. 	FaÃ§a um programa que receba a temperatura mÃ©dia de cada mÃªs do ano e armazene-as em um vetor. Em seguida, ele
+//	deve calcular e mostrar a maior e a menor temperatura do ano e em que mÃªs elas ocorreram.
+//	Obs.: Mostrar o mÃªs por extenso: 1 â€“ Janeiro, 2 â€“ Fevereiro, ... . Desconsiderar empates!
+
 #include <stdio.h>
 #include <locale.h>
 #define tam 12
@@ -32,80 +36,80 @@ void Exibir(float vet[])
 	switch(posM)
 	{
 	case 0:
-		printf("A maior temperatura é %.2f°C do mês de Janeiro\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Janeiro\n", vet[posM]);
 		break;
 	case 1:
-		printf("A maior temperatura é %.2f°C do mês de Fevereiro\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Fevereiro\n", vet[posM]);
 		break;
 	case 2:
-		printf("A maior temperatura é %.2f°C do mês de Março\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de MarÃ§o\n", vet[posM]);
 		break;
 	case 3:
-		printf("A maior temperatura é %.2f°C do mês de Abril\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Abril\n", vet[posM]);
 		break;
 	case 4:
-		printf("A maior temperatura é %.2f°C do mês de Maio\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Maio\n", vet[posM]);
 		break;
 	case 5:
-		printf("A maior temperatura é %.2f°C do mês de Junho\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Junho\n", vet[posM]);
 		break;
 	case 6:
-		printf("A maior temperatura é %.2f°C do mês de Julho\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Julho\n", vet[posM]);
 		break;
 	case 7:
-		printf("A maior temperatura é %.2f°C do mês de Agosto\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Agosto\n", vet[posM]);
 		break;
 	case 8:
-		printf("A maior temperatura é %.2f°C do mês de Setembro\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Setembro\n", vet[posM]);
 		break;
 	case 9:
-		printf("A maior temperatura é %.2f°C do mês de Outubro\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Outubro\n", vet[posM]);
 		break;
 	case 10:
-		printf("A maior temperatura é %.2f°C do mês de Novembro\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Novembro\n", vet[posM]);
 		break;
 	case 11:
-		printf("A maior temperatura é %.2f°C do mês de Dezembro\n", vet[posM]);
+		printf("A maior temperatura Ã© %.2fÂ°C do mÃªs de Dezembro\n", vet[posM]);
 		break;
 	}//Fim do switch da maior temperatura
 	printf("\n");
 	switch(posm)
 	{
 	case 0:
-		printf("A menor temperatura é %.2f°C do mês de Janeiro\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Janeiro\n", vet[posm]);
 		break;
 	case 1:
-		printf("A menor temperatura é %.2f°C do mês de Fevereiro\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Fevereiro\n", vet[posm]);
 		break;
 	case 2:
-		printf("A menor temperatura é %.2f°C do mês de Março\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de MarÃ§o\n", vet[posm]);
 		break;
 	case 3:
-		printf("A menor temperatura é %.2f°C do mês de Abril\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Abril\n", vet[posm]);
 		break;
 	case 4:
-		printf("A menor temperatura é %.2f°C do mês de Maio\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Maio\n", vet[posm]);
 		break;
 	case 5:
-		printf("A menor temperatura é %.2f°C do mês de Junho\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Junho\n", vet[posm]);
 		break;
 	case 6:
-		printf("A menor temperatura é %.2f°C do mês de Julho\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Julho\n", vet[posm]);
 		break;
 	case 7:
-		printf("A menor temperatura é %.2f°C do mês de Agosto\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Agosto\n", vet[posm]);
 		break;
 	case 8:
-		printf("A menor temperatura é %.2f°C do mês de Setembro\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Setembro\n", vet[posm]);
 		break;
 	case 9:
-		printf("A menor temperatura é %.2f°C do mês de Outubro\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Outubro\n", vet[posm]);
 		break;
 	case 10:
-		printf("A menor temperatura é %.2f°C do mês de Novembro\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Novembro\n", vet[posm]);
 		break;
 	case 11:
-		printf("A menor temperatura é %.2f°C do mês de Dezembro\n", vet[posm]);
+		printf("A menor temperatura Ã© %.2fÂ°C do mÃªs de Dezembro\n", vet[posm]);
 		break;
 	}//Fim do switch da menor temperatura
 	printf("\n");
