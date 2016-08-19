@@ -1,3 +1,16 @@
+//3. 	Escrever um programa, em C, que l√™ um vetor chamado Numeros de 20 n√∫meros inteiros e exibe os seus elementos.
+//	Encontre, a seguir, o menor elemento do vetor e a sua posi√ß√£o no vetor, o maior elemento do vetor e a sua posi√ß√£o no
+//	vetor, e exiba estas informa√ß√µes. Escreva tamb√©m fun√ß√£o que receba o vetor e um valor e retorne o √≠ndice onde o
+//	valor est√° localizado, caso o valor n√£o seja encontrado retorne -1.
+//	Exemplo:
+//	Lido:
+//	5 18 2 15 3 13 20 14 1 12 6 16 9 17 8 11 7 19 10 4
+//	Exibido:
+//	5 18 2 15 3 13 20 14 1 12 6 16 9 17 8 11 7 19 10 4
+//	1 e o menor elemento do vetor e sua posi√ß√£o no vetor e 8
+//	20 e o maior elemento do vetor e sua posi√ß√£o no vetor e 6
+//	14 est√° localizado no √≠ndice 7
+
 #include <stdio.h>
 #include <locale.h>
 #define tam 20
@@ -7,7 +20,7 @@ void preencherVINT(int vet[])//preenchimento dos vetores de inteiros
 	int i;
 	for (i = 0; i<tam; i++)
 	{
-		printf("N˙mero %d: ", i+1);
+		printf("N√∫mero %d: ", i+1);
 		scanf("%d", &vet[i]);
 		fflush(stdin);
 	}
@@ -35,7 +48,7 @@ void ExibirMenor(int vet[])
 			pos = i;
 		}
 	}
-	printf("%d È o menor elemento do vetor e sua posiÁ„o È %d\n\n", m, pos+1);
+	printf("%d √© o menor elemento do vetor e sua posi√ß√£o √© %d\n\n", m, pos+1);
 }
 
 void ExibirMaior(int vet[])
@@ -49,7 +62,7 @@ void ExibirMaior(int vet[])
 			pos = i;
 		}
 	}
-	printf("%d È o maior elemento do vetor e sua posiÁ„o È %d\n\n", M, pos+1);
+	printf("%d √© o maior elemento do vetor e sua posi√ß√£o √© %d\n\n", M, pos+1);
 }
 
 int BuscarValor(int vet[], int val)
@@ -70,12 +83,12 @@ void menu(int vet[])
 	do
 	{
 		printf("Menu:\n\n");
-		printf("1- Exibir vetor N˙meros\n");
-		printf("2- Exibir menor valor do vetor N˙meros\n");
-		printf("3- Exibir maior valor do vetor N˙meros\n");
-		printf("4- Buscar um valor no vetor N˙meros\n");
+		printf("1- Exibir vetor N√∫meros\n");
+		printf("2- Exibir menor valor do vetor N√∫meros\n");
+		printf("3- Exibir maior valor do vetor N√∫meros\n");
+		printf("4- Buscar um valor no vetor N√∫meros\n");
 		printf("0- Sair\n");
-		printf("Informe sua opÁ„o: ");
+		printf("Informe sua op√ß√£o: ");
 		op = getchar();
 		fflush(stdin);
 		printf("\n");
@@ -96,14 +109,14 @@ void menu(int vet[])
 			fflush(stdin);
 			bus = BuscarValor(vet, val);
 			if(bus == -1)
-				printf("Valor n„o encontrado\n\n");
+				printf("Valor n√£o encontrado\n\n");
 			else
-				printf("%d est· localizado no Ìndice %d\n\n", val, bus+1);
+				printf("%d est√° localizado no √≠ndice %d\n\n", val, bus+1);
 			break;
 		case '0':
 			break;
 		default:
-			printf("OpÁ„o inv·lida\n\n");
+			printf("Op√ß√£o inv√°lida\n\n");
 		}
 	}while(op != '0');
 }
@@ -112,7 +125,7 @@ int main ()
 {
 	int vet[tam];
 	setlocale(LC_ALL, "");
-	printf("Preenchimento do vetor N˙meros:\n\n");
+	printf("Preenchimento do vetor N√∫meros:\n\n");
 	preencherVINT(vet);
 	menu(vet);
 	return 0;
