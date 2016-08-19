@@ -1,3 +1,6 @@
+//2. 	Faça um programa que inverte a ordem dos elementos de um vetor lido do usuário, de modo que o primeiro elemento
+//	passe a ser o último, o segundo passe a ser o penúltimo e assim por diante. Use apenas um vetor.
+
 #include <stdio.h>
 #include <locale.h>
 #define tam 20
@@ -7,7 +10,7 @@ void preencherVINT(int vet[])//preenchimento dos vetores de inteiros
 	int i;
 	for (i = 0; i<tam; i++)
 	{
-		printf("N�mero %d: ", i+1);
+		printf("Número %d: ", i+1);
 		scanf("%d", &vet[i]);
 		fflush(stdin);
 	}
