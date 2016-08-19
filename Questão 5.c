@@ -1,3 +1,9 @@
+//5. 	Faça um programa que leia 10 valores reais da entrada e identifique o valor mais próximo da média.
+//	Exemplo (Supondo apenas quatro valores):
+//	2.5 7.5 10.0 4.0
+//	Média = 6.0 (não deve ser impresso)
+//	Valor mais próximo da média = 7.5 (resultado a ser impresso)
+
 #include <stdio.h>
 #include <locale.h>
 #define tam 10
@@ -7,7 +13,7 @@ void Preencher(float vet[])
 	int i;
 	for (i = 0; i<tam; i++)
 	{
-		printf("N�mero %d: ", i+1);
+		printf("Número %d: ", i+1);
 		scanf("%f", &vet[i]);
 	}
 	printf("\n\n");
@@ -65,7 +71,7 @@ void BuscarMaisProx(float vet[])
 		}
 	}//Fim do for
 	printf("%.2f\n", med);
-	printf("O valor mais pr�ximo da m�dia � %.2f\n\n", vet[pos]);
+	printf("O valor mais próximo da média é %.2f\n\n", vet[pos]);
 }
 
 int main ()
